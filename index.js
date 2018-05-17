@@ -110,35 +110,30 @@ fi = (function() {
       return newArr;
     },
 
-    // sortBy: function(array, iteratee){
-    //   let newArr = [];
-    //   for (const item of array){
-    //     newArr.push(iteratee(item));
-    //   }
-    //   console.log(newArr.sort());
-    //   return newArr;
-    // },
+    sortBy: function(array, iteratee){
+      let newArr = [];
+      for (const val of array){
+        newArr.push(iteratee(val))
+      }
+      console.log(  );
+      return newArr.sort((a, b) => a - b);
+    },
 
-    // sortBy: function(array){
-    //   let newArr = [...array];
+    flatten: function(array, shallow){
+      let newArr = [];
+      
+      function deeper(arr){
+        for (const val of arr){
+          if (typeof val === "object"){
+            deeper(val);
+          }else{
+            newArr.push(val);
+          }
+        }
+      }
 
-    //   for (const item of newArr){
-    //     let a = item;
-    //     let b = newArr[newArr.indexOf(item)+1];
-    //     if (a > b){
-    //       // console.log("**inside if**");
-    //       // console.log(`curr item: ${a} Next item: ${b}. current array: ${newArr}.`);
-    //       newArr[newArr.indexOf(a)] = b;
-    //       newArr[newArr.indexOf(b)] = a;
-    //       // console.log(`after: curr item: ${a} Next item: ${b}.`);
-    //       // console.log(`updated array: ${newArr}.`);
-    //       // console.log("---------------");
-    //     }
-    //   }
-    //   console.log("********* fin!! **********");
-    //   return newArr;
-    // }
-
+      return newArr
+    }
 
 
     // functions: function() {
