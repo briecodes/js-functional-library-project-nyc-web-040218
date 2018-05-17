@@ -110,6 +110,35 @@ fi = (function() {
       return newArr;
     },
 
+    // sortBy: function(array, iteratee){
+    //   let newArr = [];
+    //   for (const item of array){
+    //     newArr.push(iteratee(item));
+    //   }
+    //   console.log(newArr.sort());
+    //   return newArr;
+    // },
+
+    // sortBy: function(array){
+    //   let newArr = [...array];
+
+    //   for (const item of newArr){
+    //     let a = item;
+    //     let b = newArr[newArr.indexOf(item)+1];
+    //     if (a > b){
+    //       // console.log("**inside if**");
+    //       // console.log(`curr item: ${a} Next item: ${b}. current array: ${newArr}.`);
+    //       newArr[newArr.indexOf(a)] = b;
+    //       newArr[newArr.indexOf(b)] = a;
+    //       // console.log(`after: curr item: ${a} Next item: ${b}.`);
+    //       // console.log(`updated array: ${newArr}.`);
+    //       // console.log("---------------");
+    //     }
+    //   }
+    //   console.log("********* fin!! **********");
+    //   return newArr;
+    // }
+
 
 
     // functions: function() {
